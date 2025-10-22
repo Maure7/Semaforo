@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run App.Main",
+      "request": "launch",
+      "mainClass": "App.Main",
+      "cwd": "${workspaceFolder}",
+      "vmArgs": "--enable-native-access=ALL-UNNAMED"
+    }
+  ]
+}

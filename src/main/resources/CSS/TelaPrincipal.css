@@ -1,0 +1,44 @@
+#barraLateral {
+    -fx-background-color: #161616;
+}
+
+#barraLateral .button {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+   -fx-background-color: linear-gradient(to right, #a86f13, #a68b20);
+    -fx-cursor: hand;
+   -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+#barraLateral .button:hover {
+     -fx-background-color: linear-gradient(to right, #ef9d19, #f7dd78);
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+}
+
+#barraLateral .button.active-button {
+    -fx-background-color: linear-gradient(to right, #60421d, #9d722b);
+    -fx-text-fill: white;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+#barraLateral #btnSair {
+    -fx-text-fill: white;
+  
+    -fx-text-weight: bold;
+   -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #392020 0.0%, #7e0d0d 100.0%);
+}
+#barraLateral #btnSair:hover{
+-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #6b0f0f 0.0%, #b72323 100.0%);
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+}
+
+.conteudo-central {
+     -fx-background-color:linear-gradient(to right, #42595c, #354345) 
+    
+}
+

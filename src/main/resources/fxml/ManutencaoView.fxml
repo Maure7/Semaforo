@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth= "1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ManutencaoViewController">
+    <stylesheets>
+        <URL value="@/CSS/estilos.css" />
+        <URL value="@/CSS/ManutencaoView.css" />
+        <URL value="@/CSS/VeiculosView.css" />
+    </stylesheets>
+    <children>
+        <VBox alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <children>
+                <Label text="Gestión de Mantenimientos del Vehículo" textFill="WHITE">
+                    <font><Font name="Roboto Bold" size="24.0" /></font>
+                </Label>
+                <Label fx:id="vehiculoInfoLabel" text="Vehículo: [Padrón] [Marca] [Modelo] - KM: [KM Actual]" textFill="LIGHTGRAY">
+                    <font><Font size="16.0" /></font>
+                </Label>
+
+                <HBox alignment="CENTER" spacing="20.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <TableView fx:id="manutencaoTableView" HBox.hgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="idColumn" minWidth="50.0" prefWidth="60.0" text="ID" />
+                                <TableColumn fx:id="dataColumn" prefWidth="120.0" text="FECHA" />
+                                <TableColumn fx:id="descricaoColumn" prefWidth="250.0" text="DESCRIPCIÓN" />
+                                <TableColumn fx:id="costoColumn" prefWidth="100.0" text="COSTO" />
+                                <TableColumn fx:id="kmManutencaoColumn" prefWidth="100.0" text="KM MANUT." />
+                            </columns>
+                            <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY" /></columnResizePolicy>
+                        </TableView>
+
+                        <VBox alignment="TOP_CENTER" spacing="10.0" minWidth="300.0" maxWidth="400.0">
+                            <children>
+                                <Label text="Detalles del Mantenimiento" textFill="WHITE">
+                                    <font><Font name="System Bold" size="18.0" /></font>
+                                ></Label>
+                                <GridPane hgap="10" vgap="8">
+                                    <padding><Insets top="15.0" /></padding>
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="40.0" minWidth="100.0" maxWidth="120.0"/>
+                                        <ColumnConstraints hgrow="ALWAYS" percentWidth="60.0"/>
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints /> <RowConstraints /> <RowConstraints /> <RowConstraints />
+                                    </rowConstraints>
+                                    <Label text="Fecha:" textFill="white" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                                    <DatePicker fx:id="dataPicker" prefWidth="Infinity" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                    
+                                    <Label text="Descripción:" textFill="white" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                                    <TextField fx:id="descricaoField" promptText="Descripción del trabajo" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    
+                                    <Label text="Costo:" textFill="white" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                                    <TextField fx:id="custoField" promptText="Costo del mantenimiento" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2" /> <Label text="KM Mantenimiento:" textFill="white" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                                    <TextField fx:id="kmManutencaoField" promptText="Kilometraje del vehículo" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                </GridPane>
+
+                                <HBox alignment="CENTER" spacing="10.0">
+                                    <padding><Insets top="15.0" /></padding>
+                                    <children>
+                                        <Button fx:id="saveButton" onAction="#handleSaveManutencao" HBox.hgrow="ALWAYS" text="Guardar Mantenimiento" />
+                                        <Button fx:id="newButton" onAction="#handleNewManutencao" HBox.hgrow="ALWAYS" text="Nuevo" />
+                                    </children>
+                                </HBox>
+                                <Button fx:id="deleteButton" onAction="#handleDeleteManutencao" maxWidth="Infinity" text="Eliminar Mantenimiento" styleClass="remove-button"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                    <Button fx:id="cerrarBtn" text="Cerrar" onAction="#handleClose" />
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

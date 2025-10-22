@@ -1,0 +1,26 @@
+ 
+.title-bar {
+    -fx-background-color: #161616;
+}
+
+.title-bar .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.title-bar .button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15 8 15;
+}
+
+.title-bar .button:hover {
+    -fx-background-color: #4A506A;
+}
+
+#btnCerrar:hover {
+    -fx-background-color: #E81123;
+}

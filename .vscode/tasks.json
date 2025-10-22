@@ -1,0 +1,13 @@
+﻿{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "mvn javafx:run",
+      "type": "shell",
+      "command": "mvn",
+      "args": ["-q", "javafx:run"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ]
+}

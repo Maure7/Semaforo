@@ -1,0 +1,337 @@
+#mainFxmlClass {
+    -fx-background-color: linear-gradient(to right, #243547, #212c37);
+}
+
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Roboto"; /* opcional, se quiser forçar cor */
+}
+
+
+.text-field{
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+        -fx-background-color: #2b2b2b;
+    -fx-text-fill: #ffffff;
+    -fx-pref-height: 6px;
+}
+.text-field:hover {
+ -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, #959595, 15, 0.4, 0, 0);
+}
+
+
+.check-box {
+    -fx-text-fill: #ffffff; 
+}
+
+.check-box .box {
+
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+       -fx-background-color: #2b2b2b;
+    -fx-pref-width: 22px;
+    -fx-pref-height: 22px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #00ffca; 
+}
+
+.check-box:hover .box {
+    -fx-border-color: #d3d3d3; 
+  -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, #959595, 15, 0.4, 0, 0);
+}
+
+
+.button:hover {
+   -fx-background-color: linear-gradient(to right, #ef9d19, #f7dd78);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.button{
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-color: linear-gradient(to right, #a86f13, #a68b20);
+    -fx-cursor: hand;
+   -fx-background-radius: 20;
+ 
+}
+
+
+/* --- Estilo Principal da ComboBox --- */
+.combo-box {
+    /* Copiando o estilo de fundo e borda do TextField */
+       -fx-background-color: #2b2b2b;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+}
+
+/* Efeito ao passar o mouse por cima */
+.combo-box:hover {
+    -fx-border-color: #d3d3d3;
+     -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, #959595, 15, 0.4, 0, 0);
+}
+
+/* --- Estilo do Texto e da Célula Visível --- */
+/* Garante que o item selecionado (visível) tenha fundo transparente e texto branco */
+.combo-box .list-cell {
+    -fx-text-fill: #ffffff;
+    -fx-background-color: transparent;
+    -fx-padding: 6px; /* Espaçamento interno */
+}
+
+/* --- Estilo da SETA --- */
+.combo-box .arrow {
+    -fx-background-color: #ffffff; /* Seta branca para contrastar */
+    -fx-shape: "M0,-4L4,0L8,-4z"; /* Formato opcional de triângulo */
+}
+
+/* --- Estilo da LISTA SUSPENSA (Dropdown) --- */
+/* Fundo e borda da lista que abre */
+.combo-box-popup .list-view {
+       -fx-background-color: #2b2b2b;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+       -fx-border-radius:10;
+}
+
+/* Estilo dos ITENS DA LISTA */
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: #ffffff;  
+   -fx-font-weight: bold;
+   -fx-font-size:16px ;
+    -fx-background-color: transparent; /* Fundo padrão transparente */
+}
+
+/* Efeito ao passar o mouse ou selecionar um item na lista */
+.combo-box-popup .list-view .list-cell:filled:hover,
+.combo-box-popup .list-view .list-cell:filled:selected {
+    -fx-background-color: #555555; /* Cor de destaque cinza escuro */
+    -fx-text-fill: #ffffff;
+}
+
+/* --- Estilo Principal da ChoiceBox --- */
+.choice-box {
+    /* Copiando o estilo de fundo e borda do TextField */
+        -fx-background-color: #2b2b2b;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+}
+
+/* Efeito ao passar o mouse por cima */
+.choice-box:hover {
+    -fx-border-color: #d3d3d3;
+     -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, #959595, 15, 0.4, 0, 0);
+}
+
+/* Estilo do TEXTO do item selecionado */
+.choice-box .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* --- Estilo da SETA --- */
+.choice-box .open-button .arrow {
+    -fx-background-color: #ffffff; /* Seta branca para contrastar */
+    -fx-shape: "M0,-4L4,0L8,-4z";
+}
+
+/* --- Estilo do MENU SUSPENSO (Context Menu) --- */
+/* Fundo e borda do menu que abre */
+.context-menu {
+    -fx-background-color: #2b2b2b;
+    -fx-background-radius: 10;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2; /* Uma borda mais fina fica melhor no menu */
+    -fx-border-radius:10;
+}
+
+/* Estilo dos ITENS DO MENU */
+.menu-item .label {
+    -fx-text-fill: #ffffff; /* Texto dos itens branco */
+}
+
+/* Efeito ao passar o mouse ou selecionar um item no menu */
+.menu-item:focused {
+    -fx-background-color: #555555; /* Cor de destaque cinza escuro */
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* --- Estilo Principal do DatePicker --- */
+.date-picker {
+       -fx-background-color: #2b2b2b;
+    -fx-background-radius: 10;
+}
+
+/* O campo de texto dentro do DatePicker */
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+}
+
+/* O ÍCONE do calendário */
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+}
+
+.date-picker .arrow-button:hover{
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, #959595, 15, 0.4, 0, 0);
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #ffffff;
+    -fx-shape: "M7 2h-6q-.425 0-.712-.288T0 1.288V.712Q0 .275.288 0T.712 0h6q.425 0 .713.288T8 .712v.575Q8 1.725 7.712 2T7 2ZM7 5h-6q-.425 0-.712-.288T0 4.288V3.712Q0 3.275.288 3T.712 3h6q.425 0 .713.288T8 3.712v.575Q8 4.725 7.712 5T7 5ZM2 8h-1q-.425 0-.712-.288T0 7.288V6.712Q0 6.275.288 6T.712 6h1q.425 0 .713.288T2 6.712v.575Q2 7.725 1.712 8T1 8Z";
+    -fx-padding: 0.5em;
+}
+
+/* --- Estilo do Calendário POPUP --- */
+.date-picker-popup {
+    -fx-background-color: #2b2b2b;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+     -fx-text-weight: bold;
+}
+
+/* Cabeçalho do Calendário (Mês/Ano) */
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #2b2b2b;
+}
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Setas de navegação de mês */
+.date-picker-popup .spinner .left-arrow,
+.date-picker-popup .spinner .right-arrow {
+    -fx-background-color: #000000;
+}
+
+/* Células com os nomes dos dias da semana */
+.date-picker-popup .day-name-cell {
+    -fx-text-fill: #d3d3d3;
+   -fx-text-weight: italic;
+}
+
+/* Células dos Dias (os números) */
+.date-picker-popup .date-cell {
+    -fx-text-fill: #333333;
+    -fx-background-color: white;
+    -fx-background-radius: 4;
+}
+
+/* Efeito ao passar o mouse sobre um dia */
+.date-picker-popup .date-cell:hover {
+    -fx-background-color: #ffd287;
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+}
+
+/* Dia de hoje (antes estava .date-cell.today) */
+.date-picker-popup .today {
+    -fx-text-fill: #00031b;
+    -fx-text-weight: bold;
+    -fx-background-color: #d5fdff;
+}
+
+/* --- CORREÇÃO: usar a classe 'selected' (não o pseudo :selected) --- */
+
+/* Estilo para o dia SELECIONADO */
+.date-picker-popup .selected,
+.date-picker-popup .date-cell.selected,
+.date-picker-popup .previous-month.selected,
+.date-picker-popup .next-month.selected {
+    -fx-background-color: #847459;    /* cor de seleção */
+    -fx-background-insets: 1, 2;      /* mantém camadas semelhantes ao default */
+    -fx-background-radius: 3;
+    -fx-text-fill: white;
+}
+
+/* Regra específica para quando o dia SELECIONADO também é HOJE */
+.date-picker-popup .today.selected {
+    -fx-background-color: #7c694a;
+    -fx-text-fill: white;
+}
+
+GridPane {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-padding: 10;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0.8;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-alignment: CENTER;
+}
+
+
+/*-----------------------------------------------------------------ESTILOS ESPECIFICOS DA TELA DE VEICULOS-----------------------------------------------------------------------*/
+#changeImageButton{
+     -fx-background-color: linear-gradient(to right, #29685e, #0c876d); /* Azul escuro → claro */
+    -fx-text-fill: white;
+}
+#changeImageButton:hover {
+    -fx-background-color:linear-gradient(to right, #509589, #1da589);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 10, 0.0, 0, 3);
+}
+
+#deleteButton{
+     -fx-text-fill: white;
+    -fx-text-weight: bold;
+     -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #392020 0.0%, #7e0d0d 100.0%);
+}
+#deleteButton:hover{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #6b0f0f 0.0%, #b72323 100.0%);
+}
+
+#searchField {
+    -fx-background-radius: 17;
+    -fx-border-radius: 17;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+        -fx-background-color: #2b2b2b;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 5px;      /* aumenta o texto */
+    -fx-pref-height: 8px;    /* aumenta a altura sem alterar padding */
+}
+
+#searchField:hover {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, #959595, 15, 0.4, 0, 0);
+}
+
+#veiculoLabel{
+    -fx-text-weight: bold;
+    -fx-font-size:17.05px ;
+    -fx-font-family:Roboto ;
+}

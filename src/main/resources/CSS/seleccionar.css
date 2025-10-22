@@ -1,0 +1,25 @@
+#searchField {
+    -fx-background-radius: 17;
+    -fx-border-radius: 17;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+        -fx-background-color: #2b2b2b;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;      /* aumenta o texto */
+    -fx-pref-height: 8px;    /* aumenta a altura sem alterar padding */
+}
+
+#searchField:hover {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, #959595, 15, 0.4, 0, 0);
+}
+
+#cancelarBtn{
+     -fx-text-fill: white;
+    -fx-text-weight: bold;
+-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #522b2b 0.0%, #8e3b3b 100.0%);
+}
+#cancelarBtn:hover{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #6b0000 0.0%, #b72323 100.0%);
+}

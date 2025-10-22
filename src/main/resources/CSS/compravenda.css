@@ -1,0 +1,156 @@
+/* -- COLORES DE REFERENCIA (ajustados para contraste) --
+   - Naranja/Amarillo (activo/principal): #f39c12, #f1c40f
+   - Marrón/Naranja Oscuro (activo/hover): #60421d, #9d722b
+   - Fondo Principal: #212c37 (mainFxmlClass)
+   - Texto Botones Inactivos: #333333 (un gris muy oscuro, casi negro, para buen contraste sobre naranja/amarillo)
+   - Texto Botones Activos/Hover: white
+   - Fondo de la barra de botones: #1a1f24 (un gris muy oscuro para un buen contraste con los botones)
+*/
+
+.compras-pane {
+    -fx-background-color: linear-gradient(to right, #243547, #212c37);
+}
+
+
+.mainFxmlClass {
+    -fx-background-color: linear-gradient(to right, #243547, #212c37);
+}
+
+/* Estilo para el HBox que contiene los botones de navegación */
+.HBox.nav-bar { /* Añade esta clase CSS en tu FXML al HBox de los botones */
+ -fx-background-color: linear-gradient(to right, #243547, #212c37);
+   
+  
+}
+
+/* Estilo para los botones de navegación (COMPRAS/VENTAS) cuando NO están activos */
+.nav-button {
+    -fx-text-fill: #333333; /* Texto gris muy oscuro, casi negro, para contraste sobre naranja/amarillo */
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+   -fx-background-color: linear-gradient(to right, #f39c12, #f1c40f); /* Degradado naranja/amarillo */
+    -fx-cursor: hand;
+    -fx-background-radius: 10;
+    -fx-border-color: transparent;
+    -fx-padding: 10px 20px;
+    -fx-min-width: 150px;
+    -fx-max-width: Infinity;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0.0, 0, 2);
+    -fx-alignment: CENTER;
+}
+
+/* Estilo al pasar el ratón por encima de un botón de navegación (cuando NO está activo) */
+.nav-button:hover {
+     -fx-background-color: linear-gradient(to right, #f3b046, #f4dd80); /* Un degradado un poco más oscuro al hacer hover */
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0.0, 0, 3);
+}
+
+/* Estilo para el botón de navegación ACTIVO (el que representa la vista actual) */
+.nav-button-active {
+    -fx-text-fill: white; /* Texto blanco para el botón activo */
+    -fx-background-color: linear-gradient(to right, #60421d, #9d722b); /* Degradado marrón/naranja oscuro */
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+    -fx-background-radius: 10;
+    -fx-padding: 10px 20px;
+    -fx-min-width: 150px;
+}
+
+/* Estilo al pasar el ratón por encima del botón de navegación ACTIVO */
+.nav-button-active:hover {
+    -fx-background-color: linear-gradient(to right, #452f14, #7a5a22); /* Degradado un poco más oscuro al hacer hover en activo */
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+#newButton {
+    -fx-background-color: linear-gradient(to right, #29685e, #0c876d); /* Azul escuro → claro */
+    -fx-text-fill: white;
+}
+
+/* Hover para dar destaque */
+#newButton:hover {
+    -fx-background-color:linear-gradient(to right, #509589, #1da589);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 10, 0.0, 0, 3);
+}
+
+
+/* --- ESTILOS DE LA TABLA (Mantenidos o mejorados) --- */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 1.08px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #00a005;
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-padding: 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-padding: 10px 5px;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: #4CAF50;
+    -fx-background-radius: 5px 5px 0 0;
+}
+
+.table-row-cell {
+    -fx-background-color: #2a3e50;
+    -fx-text-fill: #ecf0f1;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-border-color: transparent transparent #3e5262 transparent;
+    -fx-border-width: 0.5px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #34495e;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #3e5262;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #3f51b5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 8px 5px;
+}
+
+.table-view .scroll-bar:vertical .increment-button,
+.table-view .scroll-bar:vertical .decrement-button,
+.table-view .scroll-bar:horizontal .increment-button,
+.table-view .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.table-view .scroll-bar .track {
+    -fx-background-color: #3e5262;
+    -fx-background-radius: 5px;
+}
+
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #4CAF50;
+    -fx-background-radius: 5px;
+}

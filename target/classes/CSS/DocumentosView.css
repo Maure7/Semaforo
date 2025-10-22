@@ -1,0 +1,136 @@
+.mainFxmlClass {
+       -fx-background-color: #2b2b2b;
+}
+
+.text-field{
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+        -fx-background-color: #2b2b2b;
+    -fx-text-fill: #ffffff;
+      -fx-font-size: 15px;  
+    -fx-pref-height: 6px;
+}
+.text-field:hover {
+ -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, #959595, 15, 0.4, 0, 0);
+}
+
+
+.label {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Roboto"; /* opcional, se quiser forçar cor */
+}
+#deleteDocumentoButton{
+     -fx-text-fill: white;
+    -fx-text-weight: bold;
+     -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #522b2b 0.0%, #8e3b3b 100.0%);
+}
+#deleteDocumentoButton:hover{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #6b0000 0.0%, #b72323 100.0%);
+}
+
+
+#cerrarBtn{
+     -fx-text-fill: white;
+    -fx-text-weight: bold;
+     -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #522b2b 0.0%, #8e3b3b 100.0%);
+}
+#cerrarBtn:hover{
+    -fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 0.0%, #6b0000 0.0%, #b72323 100.0%);
+}
+
+#newDocumentoButton {
+    -fx-background-color: linear-gradient(to right, #29685e, #0c876d); /* Azul escuro → claro */
+    -fx-text-fill: white;
+}
+
+/* Hover para dar destaque */
+#newDocumentoButton:hover {
+    -fx-background-color:linear-gradient(to right, #509589, #1da589);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 10, 0.0, 0, 3);
+}
+
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #4CAF50;
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-padding: 0;
+}
+
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-padding: 10px 5px;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: #4CAF50;
+    -fx-background-radius: 5px 5px 0 0;
+}
+
+.table-row-cell {
+    -fx-background-color: #2a3e50;
+    -fx-text-fill: #a8ffde;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-border-color: transparent transparent #3e5262 transparent;
+    -fx-border-width: 0.5px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #34495e;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #3e5262;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #3f51b5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 8px 5px;
+    -fx-text-fill: #a8ffde;
+}
+
+.table-view .scroll-bar:vertical .increment-button,
+.table-view .scroll-bar:vertical .decrement-button,
+.table-view .scroll-bar:horizontal .increment-button,
+.table-view .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.table-view .scroll-bar .track {
+    -fx-background-color: #3e5262;
+    -fx-background-radius: 5px;
+}
+
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #4CAF50;
+    -fx-background-radius: 5px;
+}

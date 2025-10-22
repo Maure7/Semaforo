@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane 
+    fx:id="barraTitulo" 
+    styleClass="title-bar" 
+    xmlns="http://javafx.com/javafx/23.0.1" 
+    xmlns:fx="http://javafx.com/fxml/1" 
+    fx:controller="Controllers.BarraTituloController">
+
+    <children>
+        <Label fx:id="lblTituloVentana" layoutX="14.0" layoutY="12.0" text="" />
+        
+        <HBox alignment="CENTER" spacing="5.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+           <children>
+              <Button onAction="#minimizarVentana" text="_" />
+              <Button fx:id="btnCerrar" onAction="#cerrarVentana" text="X" />
+           </children>
+        </HBox>
+    </children>
+</AnchorPane>
