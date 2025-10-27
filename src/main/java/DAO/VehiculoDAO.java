@@ -34,11 +34,12 @@ public class VehiculoDAO implements CRUD<Vehiculo> {
                 stmt.setNull(10, java.sql.Types.INTEGER);
             }
             
-            if (vehiculo.getImagePath() != null) {
+            if (vehiculo.getImagePath() != null && vehiculo.getImagePath().length > 0) {
                 stmt.setBytes(11, vehiculo.getImagePath());
-                } else {
-                   stmt.setNull(11, Types.BLOB);
-                }
+            } else {
+                // Para coluna BYTEA, não use Types.BLOB (mapeia a OID). Use BINARY/VARBINARY.
+                stmt.setNull(11, Types.BINARY);
+            }
             stmt.setInt(12, vehiculo.getPadron());
             stmt.setString(13, vehiculo.getTipoVehiculo());
             stmt.setString(14, vehiculo.getCombustible());
@@ -103,11 +104,12 @@ public class VehiculoDAO implements CRUD<Vehiculo> {
                 stmt.setNull(10, java.sql.Types.INTEGER);
             }
             
-            if (vehiculo.getImagePath() != null) {
+            if (vehiculo.getImagePath() != null && vehiculo.getImagePath().length > 0) {
                 stmt.setBytes(11, vehiculo.getImagePath());
-                } else {
-                stmt.setNull(11, Types.BLOB);
-    }
+            } else {
+                // Para coluna BYTEA, não use Types.BLOB (mapeia a OID). Use BINARY/VARBINARY.
+                stmt.setNull(11, Types.BINARY);
+            }
             stmt.setInt(12, vehiculo.getPadron());
             stmt.setString(13, vehiculo.getTipoVehiculo());
             stmt.setString(14, vehiculo.getCombustible());

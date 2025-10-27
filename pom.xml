@@ -8,9 +8,9 @@
   <version>1.0.0</version>
 
   <properties>
-    <maven.compiler.release>25</maven.compiler.release>
+    <maven.compiler.release>21</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <javafx.version>23.0.1</javafx.version>
+    <javafx.version>21.0.5</javafx.version>
     <javafx.platform>win</javafx.platform>
   </properties>
 
